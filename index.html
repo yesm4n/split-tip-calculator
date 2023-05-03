@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Spli<br>tter</h1>
+    </div>
+    <!-- Intro -->
+    <div class="intro">
+        <!-- Container -->
+        <div class="container border-left">
+            <!--  Bill amount -->
+            <div class="section">
+                <p>Bill</p>
+                <label for="bill__text"></label>
+                <img class="svg-icon" src="images/icon-dollar.svg" alt="dollar">
+                <input type="text" id="bill" class="bill__text" placeholder="0">
+            </div>
+            <!-- Buttons -->
+            <p>Select Tip %</p>
+            <div class="btns">
+                <button value="0.05" class="btn-selector btn five">5%</button>
+                <button value="0.1" class="btn-selector btn ten">10%</button>
+                <button value="0.15" class="btn-selector btn fifteen">15%</button>
+                <button value="0.25" class="btn-selector btn twentyfive">25%</button>
+                <button value="0.5" class="btn-selector btn fifty">50%</button>
+                <label for="btn__custom"></label>
+                <input value="" type="text" id="custom" class="btn-selector btn__custom" placeholder="Custom">
+            </div>
+            <!-- Amount of people -->
+            <div class="section">
+                <div class="text__text">
+                    <p> Number of people </p>
+                    <p class="text__error">Can't be zero</p>
+                </div>
+                <label for="people__label"></label>
+                <img class="svg-icon" src="images/icon-person.svg" alt="person">
+                <input type="text" id="number-of-people" class="people__label" placeholder="0">
+            </div>
+            <!-- Container -->
+        </div>
+        <div class="container border-right">
+            <!-- Tip amount & total -->
+            <div class="container__cyan">
+                <div class="row">
+                    <div class="col">
+                        <p>Tip amount <br><span class="person__text">/person</span></p>
+                        <button class="btn__tip amount">$0.00</button>
+                    </div>
+                    <div class="col">
+                        <p>Total <br><span class="person__text">/person</span></p>
+                        <button class="btn__tip total">$0.00</button>
+                    </div>
+                </div>
+                <!-- RESET button -->
+                <button type="reset" id="reset" class="btn__reset">Reset</button>
+            </div>
+        </div>
+        <!-- Outro -->
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
